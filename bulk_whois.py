@@ -33,8 +33,8 @@ with open(output_file, 'w', newline='') as csvfile:
             if registrar is not None:
                 writer.writerow({'Domain': domain, 'Registrar': registrar})
             else:
-                writer.writerow({'Domain': domain, 'Registrar': 'ERROR'})
+                writer.writerow({'Domain': domain, 'Registrar': '--ERROR QUERYING WHOIS SERVER--'})
         except Exception as e:
             # Handle exceptions and write an error entry to the CSV file
             print(f"Error processing {domain}: {e}")
-            writer.writerow({'Domain': domain, 'Registrar': 'ERROR'})
+            writer.writerow({'Domain': domain, 'Registrar': '--ERROR QUERYING WHOIS SERVER--'})
