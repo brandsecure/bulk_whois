@@ -5,7 +5,6 @@ import whois
 from datetime import datetime
 
 # Generate a timestamp for the output file name
-timestamp = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
 output_file = f'output_{timestamp}.csv'
 
 # Read the list of domains from the 'domains.txt' file
